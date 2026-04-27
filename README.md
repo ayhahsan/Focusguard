@@ -25,7 +25,7 @@ All processed locally. No cloud. No accounts. No tracking.
 ## Install
 
 ```bash
-git clone https://github.com/ayhahsan/focusguard.git
+git clone https://github.com/ayhahsan/Focusguard.git
 cd focusguard
 pip install -r requirements.txt
 ```
