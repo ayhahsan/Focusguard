@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "focusguard"
+version = "0.1.0"
+description = "AI focus coach using computer vision. Privacy-first, runs offline."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Ayhahsan Ansari"}
+]
+keywords = ["productivity", "focus", "computer-vision", "mediapipe", "privacy", "offline"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Multimedia :: Video :: Capture",
+    "Topic :: Office/Business",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = [
+    "opencv-python>=4.8.0",
+    "mediapipe>=0.10.0",
+    "numpy>=1.21.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0.0", "black", "ruff"]
+
+[project.scripts]
+focusguard = "focusguard.app:FocusGuard.run"
+
+[project.urls]
+Homepage = "https://github.com/ayhahsan/focusguard"
+Issues = "https://github.com/ayhahsan/focusguard/issues"
+
+[tool.setuptools.packages.find]
+include = ["focusguard*"]
